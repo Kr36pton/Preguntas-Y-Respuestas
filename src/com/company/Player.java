@@ -36,5 +36,4 @@ public class Player {
     public void setEarnedMoney(int earnedMoney) {
         this.earnedMoney = earnedMoney;
     }
-
 }

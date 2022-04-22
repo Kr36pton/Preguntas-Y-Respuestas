@@ -1,11 +1,14 @@
 import java.util.Scanner;
 import com.company.Player;
+import com.company.Round;
+
 
 public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Player player = new Player();
+        Round round = new Round();
 
         System.out.println("¿QUIEN QUIERE SER MILLONARIO?");
         System.out.println("Se le realizaran una serie de preguntas, contesta bien y ganaras cada vez mas dinero por pregunta");
@@ -13,7 +16,10 @@ public class Main {
         System.out.println("");
         System.out.println("Ingresa tu nombre completo");
         player.setPlayerName(scanner.nextLine());
-        System.out.println(player.getPlayerName());
+
+        round.setRoundStarter(true);
+        round.gameStart();
+
 
     }
 }
