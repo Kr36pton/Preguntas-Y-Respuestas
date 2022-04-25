@@ -90,11 +90,21 @@ public class Main {
         System.out.println("Puntos actuales"+round.getPoints());
 
         round.roundOne(easyQuestions);
-        round.roundTwo(middleQuestions);
-        round.roundThree(hardQuestions);
-        round.roundFour(expertQuestions);
-        round.roundFive(legendaryQuestions);
-        round.pointsToMoney(player);
-        System.out.println(player.getPlayerName() +", El dinero ganado en total es: "+ player.getEarnedMoney()+" Gracias por jugar");
+        if(round.getIsCorrect()==1){
+            round.roundTwo(middleQuestions);
+            if(round.getIsCorrect()==1){
+                round.roundThree(hardQuestions);
+                if(round.getIsCorrect()==1){
+                    round.roundFour(expertQuestions);
+                    if(round.getIsCorrect()==1){
+                        round.roundFive(legendaryQuestions);
+                        if(round.getIsCorrect()==1){
+                            round.pointsToMoney(player);
+                            System.out.println(player.getPlayerName() +", El dinero ganado en total es: "+ player.getEarnedMoney()+" Gracias por jugar");
+                        }
+                    }
+                }
+            }
+        }
     }
 }

@@ -60,10 +60,9 @@ public class Round extends Question{
     }
 
     public void increasePoints(){
-        int accumulated = getPoints();
-        accumulated += 5;
-        setPoints(accumulated);
-        pointsToZero();
+        int score = getPoints();
+        score = score + 5;
+        setPoints(score);
     }
 
     public void pointsToZero(){
