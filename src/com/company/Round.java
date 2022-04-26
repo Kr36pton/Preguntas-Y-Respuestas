@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Round extends Question{
@@ -71,7 +72,12 @@ public class Round extends Question{
 
     //Metodo para generar un numero aleatorio
     public int generateRandomNumber(){
-        int randomNumber = (int)(Math.random()*4+0);
+        int min = 0;
+		int max = 4;
+
+		Random random = new Random();
+
+		int randomNumber = random.nextInt(max + min) + min;
         return randomNumber;
     }
 
